@@ -7,20 +7,46 @@ export default defineConfig({
 
   title: "Aaron",
   description: "portfolio-vitepress-app",
+
+  // 雙語系
+  locales: {
+    zh: {
+      label: "中文",
+      lang: "zh-TW",
+      link: "/zh",
+    },
+    en: {
+      label: "English",
+      lang: "en-US",
+      link: "/en",
+    },
+  },
+
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "關於我", link: "/" },
-      { text: "簡歷", link: "/resume" },
-      { text: "聯絡我", link: "/contact" },
+      { text: "簡歷", link: "/zh/resume" },
+      { text: "聯絡我", link: "/zh/contact" },
     ],
+    localeLinks: {
+      text: "Language",
+      items: [
+        { text: "中文", link: "/zh" },
+        { text: "English", link: "/en" },
+      ],
+    },
+  },
 
-    socialLinks: [{ icon: "github", link: "https://github.com/ronkaotw" }],
+  socialLinks: [{ icon: "github", link: "https://github.com/ronkaotw" }],
 
-    footer: {
-      message: "特別感謝 Vitepress 提供版型 ",
-      copyright:
-        'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
+  footer: {
+    message: {
+      zh: "特別感謝 Vitepress 提供版型 ",
+      en: "Special thanks to Vitepress for the template",
+    },
+    copyright: {
+      zh: 'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
+      en: 'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
     },
   },
 });

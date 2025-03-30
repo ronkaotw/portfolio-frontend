@@ -2,24 +2,21 @@
 layout: home
 
 hero:
-  name: Aaron的個人網站
-  text: 所有的作品都會放在這
+  name: Aaron Portfolio
+  text: All works will be placed here
   actions:
     - theme: alt
-      text: 簡歷
-      link: /zh/resume
-    - theme: brand
-      text: English
-      link: /en
+      text: Resume
+      link: /en/resume
 features:
   - icon: 🐙
-    title: 後端工程作品
+    title: Backend Portfolio
     link: https://github.com/ronkaotw
-    linkText: 查看 GitHub
+    linkText: Look in GitHub
     details: Exprss、PostgresSQL、MongoDB
   - icon: 🎬
-    title: YouTube 剪輯作品
+    title: YouTube Editor Portfolio
     link: https://www.youtube.com/playlist?list=PLfj9AELIIYJdFDqpXjyJf_GccS-myHJHv
-    linkText: 查看 YouTube 作品集
+    linkText: Look in YouTube
     details: Adobe Premiere、Adobe Photoshop
 ---
