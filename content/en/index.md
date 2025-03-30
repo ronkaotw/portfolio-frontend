@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: alt
       text: Resume
-      link: /content/en/resume
+      link: /en/resume
 features:
   - icon: 🐙
     title: Backend Portfolio

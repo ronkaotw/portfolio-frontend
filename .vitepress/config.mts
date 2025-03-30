@@ -1,8 +1,8 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 指定 Markdown 文件的根目錄
+  srcDir: "content",
 
   title: "Aaron",
   description: "portfolio-vitepress-app",
@@ -12,40 +12,51 @@ export default defineConfig({
     zh: {
       label: "中文",
       lang: "zh-TW",
-      link: "/content/zh/",
+      link: "/zh/",
+      themeConfig: {
+        // ✅ 把 themeConfig 移進來
+        nav: [
+          { text: "關於我", link: "/zh/" },
+          { text: "簡歷", link: "/zh/resume" },
+          { text: "聯絡我", link: "/zh/contact" },
+        ],
+        footer: {
+          message: "特別感謝 Vitepress 提供版型",
+          copyright:
+            'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
+        },
+      },
     },
     en: {
       label: "English",
       lang: "en-US",
-      link: "/content/en/",
+      link: "/en/",
+      themeConfig: {
+        // ✅ 把 themeConfig 移進來
+        nav: [
+          { text: "About", link: "/en/" },
+          { text: "Resume", link: "/en/resume" },
+          { text: "Contact", link: "/en/contact" },
+        ],
+      },
     },
   },
 
   themeConfig: {
-    nav: [
-      { text: "關於我", link: "/content/zh/" },
-      { text: "簡歷", link: "/content/zh/resume" },
-      { text: "聯絡我", link: "/content/zh/contact" },
-    ],
     localeLinks: {
       text: "Language",
       items: [
-        { text: "中文", link: "/content/zh/" },
-        { text: "English", link: "/content/en/" },
+        { text: "中文", link: "/zh/" },
+        { text: "English", link: "/en/" },
       ],
+    },
+
+    footer: {
+      message: "Special thanks to Vitepress for the template",
+      copyright:
+        'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
     },
   },
 
   socialLinks: [{ icon: "github", link: "https://github.com/ronkaotw" }],
-
-  footer: {
-    message: {
-      zh: "特別感謝 Vitepress 提供版型 ",
-      en: "Special thanks to Vitepress for the template",
-    },
-    copyright: {
-      zh: 'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
-      en: 'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
-    },
-  },
 });
