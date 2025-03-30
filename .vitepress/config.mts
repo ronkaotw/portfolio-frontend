@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 指定 Markdown 文件的根目錄
-  srcDir: "./content", // 如果你的 Markdown 文件在 `docs` 資料夾中
+  srcDir: "./content/zh", // 如果你的 Markdown 文件在 `docs` 資料夾中
 
   title: "Aaron",
   description: "portfolio-vitepress-app",
