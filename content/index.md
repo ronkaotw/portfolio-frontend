@@ -10,7 +10,7 @@ hero:
       link: /zh/resume
     - theme: brand
       text: English
-      link: /en
+      link: /en/
 features:
   - icon: 🐙
     title: 後端工程作品

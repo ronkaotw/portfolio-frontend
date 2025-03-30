@@ -2,6 +2,8 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   // 指定 Markdown 文件的根目錄
+  srcDir: "content",
+
   title: "Aaron",
   description: "portfolio-vitepress-app",
 
@@ -10,12 +12,12 @@ export default defineConfig({
     zh: {
       label: "中文",
       lang: "zh-TW",
-      link: "/content/zh/",
+      link: "/zh/",
       themeConfig: {
         nav: [
-          { text: "關於我", link: "/content/zh/" },
-          { text: "簡歷", link: "/content/zh/resume" },
-          { text: "聯絡我", link: "/content/zh/contact" },
+          { text: "關於我", link: "/zh/" },
+          { text: "簡歷", link: "/zh/resume" },
+          { text: "聯絡我", link: "/zh/contact" },
         ],
         footer: {
           message: "特別感謝 Vitepress 提供版型",
@@ -27,13 +29,18 @@ export default defineConfig({
     en: {
       label: "English",
       lang: "en-US",
-      link: "/content/en/",
+      link: "/en/",
       themeConfig: {
         nav: [
-          { text: "About", link: "/content/en/" },
-          { text: "Resume", link: "/content/en/resume" },
-          { text: "Contact", link: "/content/en/contact" },
+          { text: "About", link: "/en/" },
+          { text: "Resume", link: "/en/resume" },
+          { text: "Contact", link: "/en/contact" },
         ],
+        footer: {
+          message: "Special thanks to Vitepress for the template",
+          copyright:
+            'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
+        },
       },
     },
   },
@@ -42,13 +49,17 @@ export default defineConfig({
     localeLinks: {
       text: "Language",
       items: [
-        { text: "中文", link: "/content/zh/" },
-        { text: "English", link: "/content/en/" },
+        { text: "中文", link: "/zh/" },
+        { text: "English", link: "/en/" },
       ],
     },
-
+    nav: [
+      { text: "關於我", link: "/zh/" },
+      { text: "簡歷", link: "/zh/resume" },
+      { text: "聯絡我", link: "/zh/contact" },
+    ],
     footer: {
-      message: "Special thanks to Vitepress for the template",
+      message: "特別感謝 Vitepress 提供版型",
       copyright:
         'Copyright © 2025- <a href="https://github.com/ronkaotw" target="_blank">Aaron</a>',
     },
