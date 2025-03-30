@@ -7,10 +7,10 @@ hero:
   actions:
     - theme: alt
       text: 簡歷
-      link: /zh/resume
+      link: /content/zh/resume
     - theme: brand
       text: English
-      link: /en
+      link: /content/en
 features:
   - icon: 🐙
     title: 後端工程作品

@@ -3,7 +3,6 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 指定 Markdown 文件的根目錄
-  srcDir: "./content/zh", // 如果你的 Markdown 文件在 `docs` 資料夾中
 
   title: "Aaron",
   description: "portfolio-vitepress-app",
@@ -13,26 +12,26 @@ export default defineConfig({
     zh: {
       label: "中文",
       lang: "zh-TW",
-      link: "/zh",
+      link: "/content/zh/",
     },
     en: {
       label: "English",
       lang: "en-US",
-      link: "/en",
+      link: "/content/en/",
     },
   },
 
   themeConfig: {
     nav: [
-      { text: "關於我", link: "/" },
-      { text: "簡歷", link: "/zh/resume" },
-      { text: "聯絡我", link: "/zh/contact" },
+      { text: "關於我", link: "/content/zh/" },
+      { text: "簡歷", link: "/content/zh/resume" },
+      { text: "聯絡我", link: "/content/zh/contact" },
     ],
     localeLinks: {
       text: "Language",
       items: [
-        { text: "中文", link: "/zh" },
-        { text: "English", link: "/en" },
+        { text: "中文", link: "/content/zh/" },
+        { text: "English", link: "/content/en/" },
       ],
     },
   },
